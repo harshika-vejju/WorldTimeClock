@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WorldTimeClock.MainPage"
+    Title="World Time Clock">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="20">
+
+            <Label
+                Text="🌍 World Time Clock"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Current Time Zones"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout
+                Spacing="10">
+
+                <Picker
+                    x:Name="TimeZonePicker"
+                    Title="Select a time zone"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Picker.Items>
+
+                        <x:String>India</x:String>
+                        <x:String>New York</x:String>
+                        <x:String>London</x:String>
+                        <x:String>Tokyo</x:String>
+                        <x:String>Sydney</x:String>
+
+                    </Picker.Items>
+
+                </Picker>
+
+                <Button
+                    Text="Add"
+                    Clicked="AddTimeZone_Clicked" />
+
+            </HorizontalStackLayout>
+
+            <Border
+                Padding="15"
+                StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout
+                    Spacing="10">
+
+                    <Label
+                        x:Name="SelectedCityLabel"
+                        Text="Selected Time Zones"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center" />
+
+                    <Label
+                        x:Name="SelectedCityTimeLabel"
+                        Text="Select a city and click Add"
+                        FontSize="28"
+                        HorizontalOptions="Center" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Border
+                Padding="15"
+                StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout
+                    Spacing="8">
+
+                    <Label
+                        Text="🇮🇳 India"
+                        FontSize="22"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        x:Name="IndiaTimeLabel"
+                        Text="Loading..."
+                        FontSize="28" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Border
+                Padding="15"
+                StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout
+                    Spacing="8">
+
+                    <Label
+                        Text="🇺🇸 New York"
+                        FontSize="22"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        x:Name="NewYorkTimeLabel"
+                        Text="Loading..."
+                        FontSize="28" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Border
+                Padding="15"
+                StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout
+                    Spacing="8">
+
+                    <Label
+                        Text="🇬🇧 London"
+                        FontSize="22"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        x:Name="LondonTimeLabel"
+                        Text="Loading..."
+                        FontSize="28" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Border
+                Padding="15"
+                StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout
+                    Spacing="8">
+
+                    <Label
+                        Text="🇯🇵 Tokyo"
+                        FontSize="22"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        x:Name="TokyoTimeLabel"
+                        Text="Loading..."
+                        FontSize="28" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Border
+                Padding="15"
+                StrokeShape="RoundRectangle 15">
+
+                <VerticalStackLayout
+                    Spacing="8">
+
+                    <Label
+                        Text="🇦🇺 Sydney"
+                        FontSize="22"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        x:Name="SydneyTimeLabel"
+                        Text="Loading..."
+                        FontSize="28" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
